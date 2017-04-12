@@ -1,0 +1,106 @@
+.landing-section {
+  height: 635px;
+  background-image: url(../images/landing-bg.jpg);
+  text-align: center;
+  position: relative;
+  @include breakpoint(laptop) {
+    height: 600px;
+  }
+  @include breakpoint(tablet) {
+    height: 550px;
+  }
+  @include breakpoint(phablet) {
+    height: 500px;
+  }
+  @include breakpoint(mobile) {
+    height: 400px;
+  }
+  .container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .content {
+    display: inline-block;
+    color: #fff;
+    max-width: 615px;
+    padding: 70px 0;
+    @include breakpoint(laptop) {
+      padding: 65px 0;
+    }
+    @include breakpoint(tablet) {
+      padding: 55px 0;
+    }
+    @include breakpoint(phablet) {
+      padding: 45px 0;
+    }
+    @include breakpoint(mobile) {
+      padding: 30px 0;
+    }
+    h1 {
+      @include font-size(36px);
+      font-weight: 300;
+      position: relative;
+      margin-bottom: 30px;
+      @include breakpoint(phablet) {
+        margin-bottom: 25px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 66px;
+        height: 2px;
+        margin-left: -33px;
+        bottom: -20px;
+        background: $primary-color;
+      }
+    }
+    .text {
+      padding: 40px 100px;
+      line-height: 24px;
+      font-size: 14px;
+      @include breakpoint(laptop) {
+        padding: 35px 85px;
+      }
+      @include breakpoint(tablet) {
+        padding: 30px 70px;
+      }
+      @include breakpoint(phablet) {
+        padding: 25px 60px;
+      }
+      @include breakpoint(mobile) {
+        padding: 20px 40px;
+      }
+    }
+    .actions {
+      a {
+        display: inline-block;
+        margin: 0 10px;
+        line-height: 41px;
+        padding: 0 30px;
+        font-size: 15px;
+        border: 3px solid rgba(255,255,255,0.25);
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        color: #fff;
+        @include breakpoint(phablet) {
+          font-size: 14px;
+          padding: 0 25px;
+        }
+        @include breakpoint(mobile) {
+          font-size: 14px;
+          padding: 0 15px;
+          margin: 0 5px;
+        }
+        &.transparent {
+          background: rgba(0,0,0,0.6);
+          &:hover {
+            background: rgba(0,0,0,0.4);
+          }
+        }
+      }
+    }
+  }
+}

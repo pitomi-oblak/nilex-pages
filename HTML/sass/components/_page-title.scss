@@ -1,0 +1,45 @@
+.page-title-section {
+  background-image: url(../images/company-bg.jpg);
+  text-align: center;
+  position: relative;
+  padding: 30px 0;
+  @include breakpoint(mobile) {
+    padding: 20px 0;
+  }
+  h1 {
+    @include font-size(36px);
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 50px;
+    color: #fff;
+    margin-top: 0;
+    @include breakpoint(laptop) {
+      margin-bottom: 45px;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 40px;
+    }
+    @include breakpoint(phablet) {
+      margin-bottom: 35px;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 30px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 66px;
+      height: 2px;
+      margin-left: -33px;
+      bottom: -20px;
+      background: $primary-color;
+      @include breakpoint(tablet) {
+        bottom: -25px;
+      }
+      @include breakpoint(mobile) {
+        bottom: -15px;
+      }
+    }
+  }
+}

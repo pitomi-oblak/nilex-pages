@@ -1,0 +1,276 @@
+.software-features-section {
+  padding: 75px 0;
+  position: relative;
+  @include breakpoint(laptop) {
+    padding: 60px 0;
+  }
+  @include breakpoint(tablet) {
+    padding: 55px 0;
+  }
+  @include breakpoint(phablet) {
+    padding: 50px 0;
+  }
+  @include breakpoint(mobile) {
+    padding: 40px 0;
+  }
+  @include breakpoint(600px) {
+    padding-top: 120px;
+  }
+  @include breakpoint(380px) {
+    padding-top: 110px;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  .left-art {
+    background: url(../images/software-left-art.png);
+    width: 93px;
+    height: 109px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .right-art{
+    background: url(../images/software-right-art.png);
+    width: 204px;
+    height: 476px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    @include breakpoint(phablet) {
+      display: none;
+    }
+  }
+  .left-features {
+    > div {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint(600px) {
+        flex-direction: column;
+        > div {
+          margin-top: -77.5px;
+          &:nth-of-type(odd) {
+            margin-left: -132px;
+          }
+          &:nth-of-type(even) {
+            margin-left: 132px;
+          }
+        }
+        &.bottom {
+          > div {
+            &:nth-of-type(even) {
+              margin-left: -132px;
+            }
+            &:nth-of-type(odd) {
+              margin-left: 132px;
+            }
+          }
+        }
+      }
+      @include breakpoint(380px) {
+        > div {
+          margin-top: -70px;
+          &:nth-of-type(odd) {
+            margin-left: -120px;
+          }
+          &:nth-of-type(even) {
+            margin-left: 120px;
+          }
+        }
+        &.bottom {
+          > div {
+            &:nth-of-type(even) {
+              margin-left: -120px;
+            }
+            &:nth-of-type(odd) {
+              margin-left: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .right-features {
+    @include breakpoint(tablet) {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .title {
+      position: relative;
+      margin-bottom: 60px;
+      @include breakpoint(laptop) {
+        margin-bottom: 55px;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 50px;
+      }
+      @include breakpoint(phablet) {
+        margin-bottom: 45px;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 40px;
+      }
+      h2 {
+        @include font-size(34px);
+        font-weight: 300;
+        color: #000;
+        margin: 0;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        @include breakpoint(tablet) {
+          margin-bottom: 10px;
+          margin-top: 10px;
+        }
+      }
+      .subtitle {
+        @include font-size(18px);
+        color: #acacac;
+        font-weight: 300;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 66px;
+        height: 2px;
+        bottom: -30px;
+        background: $primary-color;
+        @include breakpoint(tablet) {
+          left: 50%;
+          margin-left: -33px;
+          bottom: -25px;
+        }
+        @include breakpoint(mobile) {
+          bottom: -15px;
+        }
+      }
+    }
+    .introtext {
+      @include font-size(16px);
+      color: #000;
+      font-weight: 300px;
+      line-height: 30px;
+      margin-bottom: 50px;
+      @include breakpoint(laptop) {
+        margin-bottom: 45px;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 40px;
+        line-height: 28px;
+      }
+      @include breakpoint(phablet) {
+        margin-bottom: 35px;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 30px;
+        line-height: 25px;
+      }
+      p {
+        margin: 20px 0;
+        @include breakpoint(tablet) {
+          margin: 15px 0;
+        }
+        @include breakpoint(phablet) {
+          margin: 10px 0;
+        }
+      }
+    }
+    .actions {
+      a {
+        line-height: 41px;
+        padding: 0 50px;
+        margin-right: 20px;
+        border: none;
+        @include breakpoint(laptop) {
+          padding: 0 35px;
+        }
+        @include breakpoint(tablet) {
+          padding: 0 30px;
+          margin-right: 15px;
+        }
+        @include breakpoint(phablet) {
+          padding: 0 25px;
+        }
+        @include breakpoint(mobile) {
+          padding: 0 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+.hexagon {
+  position: relative;
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-image: url(../images/software-features-bg.jpg);
+  background-position: fixed;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 195px;
+  height: 170px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  @include breakpoint(laptop) {
+    width: 175px;
+    height: 155px;
+  }
+  @include breakpoint(380px) {
+    width: 160px;
+    height: 140px;
+  }
+  a {
+    color: #fff;
+    display: block;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: $primary-color;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include transition(all .3s ease);
+    bottom: 0;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.4;
+    }
+  }
+  .inner {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 22px 40px;
+    h3 {
+      font-size: 13px;
+      line-height: normal;
+      margin: 0;
+      @include breakpoint(laptop) {
+        font-size: 12px;
+      }
+    }
+    .icon {
+      font-size: 66px;
+      line-height: 40px;
+      margin-bottom: 10px;
+      @include breakpoint(laptop) {
+        font-size: 56px;
+      }
+    }
+  }
+}

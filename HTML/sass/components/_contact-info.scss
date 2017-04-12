@@ -1,0 +1,116 @@
+.contact-info-section {
+  padding: 40px 0 30px 0;
+  @include breakpoint(laptop) {
+    padding: 35px 0 30px 0;
+  }
+  @include breakpoint(tablet) {
+    padding: 30px 0 25px 0;
+  }
+  @include breakpoint(phablet) {
+    padding: 25px 0 20px 0;
+  }
+  @include breakpoint(mobile) {
+    padding: 20px 0 15px 0;
+  }
+  .wrap-info {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      width: 33%;
+      padding: 0 60px 30px 60px;
+      &:nth-child(3n+1) {
+        padding: 0 0 30px 0;
+      }
+      @include breakpoint(laptop) {
+        width: 50%;
+        padding: 0 50px 25px 0 !important;
+      }
+      @include breakpoint(tablet) {
+        width: 50%;
+        padding: 0 40px 20px 0 !important;
+      }
+      @include breakpoint(phablet) {
+        width: 50%;
+        padding: 0 30px 15px 0 !important;
+      }
+      @include breakpoint(600px) {
+        width: 100%;
+        padding: 0 0 15px 0 !important;
+      }
+    }
+    h3 {
+      @include font-size(26px);
+      font-weight: 300;
+      position: relative;
+      margin-bottom: 40px;
+      color: #000;
+      margin-top: 0;
+      @include breakpoint(laptop) {
+        margin-bottom: 35px;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 30px;
+      }
+      @include breakpoint(phablet) {
+        margin-bottom: 25px;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 20px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 66px;
+        height: 2px;
+        bottom: -20px;
+        background: $primary-color;
+        @include breakpoint(tablet) {
+          bottom: -15px;
+        }
+        @include breakpoint(mobile) {
+          bottom: -10px;
+        }
+      }
+    }
+    ul {
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+        @include breakpoint(phablet) {
+          min-height: 35px;
+        }
+        @include breakpoint(600px) {
+          min-height: 30px;
+        }
+        .icon {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          @include transform(translateY(-50%));
+          @include breakpoint(phablet) {
+            img {
+              width: 80%;
+            }
+          }
+          @include breakpoint(mobile) {
+            img {
+              width: 70%;
+            }
+          }
+        }
+        .text {
+          color: #acacac;
+          @include font-size(18px);
+          font-weight: 300;
+          padding-left: 38px;
+          @include breakpoint(phablet) {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+}

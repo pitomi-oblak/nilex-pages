@@ -1,0 +1,75 @@
+.contact-maps-section {
+  .wrap-maps {
+    display: flex;
+    flex-wrap: nowrap;
+    @include breakpoint(phablet) {
+      flex-wrap: wrap;
+    }
+    > div {
+      width: 50%;
+      @include breakpoint(phablet) {
+        width: 100%;
+      }
+      > div {
+        height: 470px;
+        width: 100%;
+        @include breakpoint(phablet) {
+          height: 400px;
+        }
+        @include breakpoint(mobile) {
+          height: 350px;
+        }
+      }
+      &.left-map{
+        padding-right: 1px;
+        @include breakpoint(phablet) {
+          padding-right: 0;
+          padding-bottom: 1px;
+        }
+      }
+      &.right-map{
+        padding-left: 1px;
+        @include breakpoint(phablet) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .js-info-bubble-close {
+    top: 10px !important;
+    right: 10px !important;
+  }
+  .infowindow {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+    &.primary {
+      &:after {
+        background: $primary-color;
+      }
+    }
+    &.secondary {
+      &:after {
+        background: $secondary-color;
+      }
+    }
+    .infowindow-content {
+      color: #fff;
+      h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .address {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}

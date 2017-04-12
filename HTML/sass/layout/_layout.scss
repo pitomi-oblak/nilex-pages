@@ -1,0 +1,59 @@
+body {
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  @include transition(all .3s ease);
+  color: $primary-color;
+  &:hover {
+    color: lighten($primary-color, 5%);
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.btn{
+  font-size: 14px;
+  &.primary {
+    background: $primary-color;
+    color: #fff;
+    &:hover {
+      background: lighten($primary-color, 5%);
+    }
+  }
+  &.secondary {
+    background: $secondary-color;
+    color: #fff;
+    &:hover {
+      background: lighten($secondary-color, 5%);
+    }
+  }
+}
+
+.paraxify{
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
+
+
+#landing-canvas {
+  @include breakpoint(phablet) {
+    display: none;
+  }
+}
+
+
+#map {
+  width: 750px;
+  height: 500px;
+}

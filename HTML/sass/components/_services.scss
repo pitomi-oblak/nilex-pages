@@ -1,0 +1,232 @@
+.services-section {
+  position: relative;
+  padding: 50px 0;
+  background: #fff;
+  @include breakpoint(laptop) {
+    padding: 45px 0;
+  }
+  @include breakpoint(tablet) {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  @include breakpoint(phablet) {
+    padding: 35px 0;
+  }
+  @include breakpoint(mobile) {
+    padding: 30px 0;
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    .blocks-col {
+      @include breakpoint(mobile) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .left-art {
+    background: url(../images/services-left-art.png);
+    width: 370px;
+    height: 359px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .right-art {
+    background: url(../images/services-right-art.png);
+    width: 190px;
+    height: 143px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    @include breakpoint(phablet) {
+      display: none;
+    }
+  }
+  .title {
+    position: relative;
+    margin-bottom: 80px;
+    text-align: center;
+    @include breakpoint(laptop) {
+      margin-bottom: 75px;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 70px;
+    }
+    @include breakpoint(phablet) {
+      margin-bottom: 60px;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 50px;
+    }
+    h2 {
+      @include font-size(34px);
+      font-weight: 300;
+      color: #000;
+      margin: 0;
+      margin-bottom: 15px;
+      margin-top: 0;
+      @include breakpoint(tablet) {
+        margin-bottom: 10px;
+      }
+    }
+    .subtitle {
+      @include font-size(18px);
+      color: #a3a3a3;
+      font-weight: 300;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 66px;
+      height: 2px;
+      margin-left: -33px;
+      bottom: -30px;
+      background: $primary-color;
+      @include breakpoint(tablet) {
+        bottom: -25px;
+      }
+      @include breakpoint(mobile) {
+        bottom: -15px;
+      }
+    }
+  }
+  .action {
+    text-align: center;
+    margin-top: 50px;
+    @include breakpoint(laptop) {
+      margin-top: 30px;
+    }
+    @include breakpoint(phablet) {
+      margin-top: 20px;
+    }
+    a {
+      line-height: 41px;
+      padding: 0 30px;
+      font-size: 15px;
+      @include breakpoint(phablet) {
+        font-size: 14px;
+      }
+    }
+  }
+  .service-block {
+    text-align: center;
+    @include breakpoint(laptop) {
+      margin-bottom: 30px;
+    }
+    &:hover {
+      .image .icon {
+        -webkit-animation-name: fly-float, fly;
+        animation-name: fly-float, fly;
+        -webkit-animation-duration: .3s, 1.5s;
+        animation-duration: .3s, 1.5s;
+        -webkit-animation-delay: 0s, .3s;
+        animation-delay: 0s, .3s;
+        -webkit-animation-timing-function: ease-out, ease-in-out;
+        animation-timing-function: ease-out, ease-in-out;
+        -webkit-animation-iteration-count: 1, infinite;
+        animation-iteration-count: 1, infinite;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-direction: normal, alternate;
+        animation-direction: normal, alternate;
+      }
+    }
+    a {
+      display: block;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
+    .image {
+      position: relative;
+      margin-bottom: 30px;
+      @include breakpoint(tablet) {
+        margin-bottom: 25px;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 15px;
+      }
+      > img {
+        display: inline-block;
+        @include breakpoint(laptop) {
+          max-height: 190px;
+        }
+        @include breakpoint(600px) {
+          max-height: 155px;
+          max-width: 100%;
+        }
+      }
+      .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include transform(translateX(-50%) translateY(-50%) perspective(1px) translateZ(0));
+        img {
+          max-height: 90px;
+          @include breakpoint(600px) {
+            max-height: 70px;
+          }
+          @include breakpoint(mobile) {
+            max-height: 60px;
+          }
+        }
+      }
+    }
+    h3 {
+      color: #000;
+      @include font-size(26px);
+      margin: 0;
+      font-weight: 300;
+      word-wrap: break-word;
+    }
+  }
+}
+
+@-webkit-keyframes fly {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-58%);
+    transform: translateX(-50%) translateY(-58%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-54%);
+    transform: translateX(-50%) translateY(-54%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-58%);
+    transform: translateX(-50%) translateY(-58%);
+  }
+}
+
+@keyframes fly {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(-58%);
+    transform: translateX(-50%) translateY(-58%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%) translateY(-54%);
+    transform: translateX(-50%) translateY(-54%);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-58%);
+    transform: translateX(-50%) translateY(-58%);
+  }
+}
+
+@-webkit-keyframes fly-float {
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-58%);
+    transform: translateX(-50%) translateY(-58%);
+  }
+}
+
+@keyframes fly-float {
+  100% {
+    -webkit-transform: translateX(-50%) translateY(-58%);
+    transform: translateX(-50%) translateY(-58%);
+  }
+}

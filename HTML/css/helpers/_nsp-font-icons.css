@@ -1,0 +1,635 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'nilexregular';
+  src: url("../fonts/nilex-regular/nilex_icons-webfont.eot?v1.2");
+  src: url("../fonts/nilex-regular/nilex_icons-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/nilex-regular/nilex_icons-webfont.woff2?v1.2") format("woff2"), url("../fonts/nilex-regular/nilex_icons-webfont.woff?v1.2") format("woff"), url("../fonts/nilex-regular/nilex_icons-webfont.ttf?v1.2") format("truetype"), url("../fonts/nilex-regular/nilex_icons-webfont.svg#nilexregular?v1.2") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.f-nsp {
+  font-family: "nilexregular";
+  display: inline-block;
+  font-size: inherit;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  text-transform: none; }
+
+.f-nsp-service:before {
+  content: "!"; }
+
+.f-nsp-support:before {
+  content: '"'; }
+
+.f-nsp-switch:before {
+  content: "#"; }
+
+.f-nsp-wifi:before {
+  content: "$"; }
+
+.f-nsp-mobile-device:before {
+  content: "%"; }
+
+.f-nsp-computer:before {
+  content: "&"; }
+
+.f-nsp-business-rules:before {
+  content: "'"; }
+
+.f-nsp-channels:before {
+  content: "("; }
+
+.f-nsp-cube:before {
+  content: "E"; }
+
+.f-nsp-manage:before {
+  content: "*"; }
+
+.f-nsp-plus:before {
+  content: "+"; }
+
+.f-nsp-entity-groups:before {
+  content: ","; }
+
+.f-nsp-minus:before {
+  content: "-"; }
+
+.f-nsp-entity-editor:before {
+  content: "."; }
+
+.f-nsp-hamburger:before {
+  content: "‚"; }
+
+.f-nsp-web-server:before {
+  content: "/"; }
+
+.f-nsp-storage:before {
+  content: "0"; }
+
+.f-nsp-hosting:before {
+  content: "1"; }
+
+.f-nsp-globe:before {
+  content: "2"; }
+
+.f-nsp-network:before {
+  content: "3"; }
+
+.f-nsp-database:before {
+  content: "4"; }
+
+.f-nsp-ups:before {
+  content: "5"; }
+
+.f-nsp-os:before {
+  content: "6"; }
+
+.f-nsp-it-service:before {
+  content: "7"; }
+
+.f-nsp-accessories:before {
+  content: "8"; }
+
+.f-nsp-firewall:before {
+  content: "9"; }
+
+.f-nsp-access-point:before {
+  content: ":"; }
+
+.f-nsp-hardware:before {
+  content: ";"; }
+
+.f-nsp-quicksteps:before {
+  content: "<"; }
+
+.f-nsp-sla:before {
+  content: "="; }
+
+.f-nsp-work-schemas:before {
+  content: ">"; }
+
+.f-nsp-automation-triggers:before {
+  content: "?"; }
+
+.f-nsp-roles-permissions:before {
+  content: "@"; }
+
+.f-nsp-pencil:before {
+  content: "A"; }
+
+.f-nsp-delete:before {
+  content: "B"; }
+
+.f-nsp-flag:before {
+  content: "C"; }
+
+.f-nsp-consumable:before {
+  content: "D"; }
+
+.f-nsp-box:before {
+  content: ")"; }
+
+.f-nsp-list:before {
+  content: "F"; }
+
+.f-nsp-qr:before {
+  content: "’"; }
+
+.f-nsp-file:before {
+  content: "G"; }
+
+.f-nsp-laptop:before {
+  content: "H"; }
+
+.f-nsp-tag:before {
+  content: "I"; }
+
+.f-nsp-circle:before {
+  content: "J"; }
+
+.f-nsp-optical-disk:before {
+  content: "K"; }
+
+.f-nsp-connection:before {
+  content: "L"; }
+
+.f-nsp-cpu:before {
+  content: "M"; }
+
+.f-nsp-angle-down:before {
+  content: "N"; }
+
+.f-nsp-angle-up:before {
+  content: "O"; }
+
+.f-nsp-angle-left:before {
+  content: "P"; }
+
+.f-nsp-angle-right:before {
+  content: "Q"; }
+
+.f-nsp-ellipsis:before {
+  content: "R"; }
+
+.f-nsp-smart-phone:before {
+  content: "S"; }
+
+.f-nsp-tablet:before {
+  content: "T"; }
+
+.f-nsp-mobile-phone:before {
+  content: "U"; }
+
+.f-nsp-pda:before {
+  content: "V"; }
+
+.f-nsp-router:before {
+  content: "W"; }
+
+.f-nsp-rack:before {
+  content: "X"; }
+
+.f-nsp-cloud:before {
+  content: "Y"; }
+
+.f-nsp-security:before {
+  content: "Z"; }
+
+.f-nsp-ram:before {
+  content: "["; }
+
+.f-nsp-video:before {
+  content: "\\"; }
+
+.f-nsp-audio:before {
+  content: "]"; }
+
+.f-nsp-event-triggers:before {
+  content: "^"; }
+
+.f-nsp-ci-states:before {
+  content: "_"; }
+
+.f-nsp-notifications:before {
+  content: "`"; }
+
+.f-nsp-checked:before {
+  content: "a"; }
+
+.f-nsp-unchecked:before {
+  content: "b"; }
+
+.f-nsp-business:before {
+  content: "c"; }
+
+.f-nsp-sales:before {
+  content: "d"; }
+
+.f-nsp-mail:before {
+  content: "e"; }
+
+.f-nsp-backup:before {
+  content: "f"; }
+
+.f-nsp-server:before {
+  content: "g"; }
+
+.f-nsp-monitor:before {
+  content: "h"; }
+
+.f-nsp-desktop:before {
+  content: "i"; }
+
+.f-nsp-nettop:before {
+  content: "j"; }
+
+.f-nsp-software:before {
+  content: "k"; }
+
+.f-nsp-custom:before {
+  content: "l"; }
+
+.f-nsp-components:before {
+  content: "m"; }
+
+.f-nsp-sort-down:before {
+  content: "n"; }
+
+.f-nsp-sort-up:before {
+  content: "o"; }
+
+.f-nsp-arrow-left:before {
+  content: "p"; }
+
+.f-nsp-arow-right:before {
+  content: "q"; }
+
+.f-nsp-network-adapter:before {
+  content: "r"; }
+
+.f-nsp-mouse:before {
+  content: "s"; }
+
+.f-nsp-keyboard:before {
+  content: "t"; }
+
+.f-nsp-headphone:before {
+  content: "u"; }
+
+.f-nsp-microphone:before {
+  content: "v"; }
+
+.f-nsp-projector:before {
+  content: "w"; }
+
+.f-nsp-application:before {
+  content: "x"; }
+
+.f-nsp-printer:before {
+  content: "y"; }
+
+.f-nsp-scanner:before {
+  content: "z"; }
+
+.f-nsp-motherboard:before {
+  content: "{"; }
+
+.f-nsp-ssd:before {
+  content: "|"; }
+
+.f-nsp-hdd:before {
+  content: "}"; }
+
+.f-nsp-vendors:before {
+  content: "~"; }
+
+.f-nsp-thin-cubes:before {
+  content: "À"; }
+
+.f-nsp-chat:before {
+  content: "Ã"; }
+
+.f-nsp-templates:before {
+  content: "È"; }
+
+.f-nsp-task-templates:before {
+  content: "É"; }
+
+.f-nsp-report-templates:before {
+  content: "Ì"; }
+
+.f-nsp-call-settings:before {
+  content: "Ï"; }
+
+.f-nsp-views:before {
+  content: "Î"; }
+
+.f-nsp-facebook:before {
+  content: "Á"; }
+
+.f-nsp-twitter:before {
+  content: "Ë"; }
+
+.f-nsp-ci-types:before {
+  content: "Ç"; }
+
+.f-nsp-depreciation:before {
+  content: "Å"; }
+
+.f-nsp-licence:before {
+  content: "Æ"; }
+
+.f-nsp-relations:before {
+  content: "Ä"; }
+
+.f-nsp-schedule:before {
+  content: "Ê"; }
+
+.f-nsp-account-management:before {
+  content: "Ð"; }
+
+.f-nsp-security-settings:before {
+  content: "Ñ"; }
+
+.f-nsp-ci-groups:before {
+  content: "Ò"; }
+
+.f-nsp-department:before {
+  content: "Ó"; }
+
+.f-nsp-excellent:before {
+  content: "Ô"; }
+
+.f-nsp-vertical-ellipsis:before {
+  content: "Õ"; }
+
+.f-nsp-drag-and-drop:before {
+  content: "Ö"; }
+
+.f-nsp-hyperlink:before {
+  content: "×"; }
+
+.f-nsp-elapsing-time:before {
+  content: "Ø"; }
+
+.f-nsp-graph:before {
+  content: "Ù"; }
+
+.f-nsp-contract-management:before {
+  content: "Ú"; }
+
+.f-nsp-knowledge-base:before {
+  content: "Û"; }
+
+.f-nsp-expense-type:before {
+  content: "Ü"; }
+
+.f-nsp-impacts:before {
+  content: "Ý"; }
+
+.f-nsp-light-bulb:before {
+  content: "Þ"; }
+
+.f-nsp-messages:before {
+  content: "ß"; }
+
+.f-nsp-prohibited:before {
+  content: "à"; }
+
+.f-nsp-document:before {
+  content: "á"; }
+
+.f-nsp-download:before {
+  content: "â"; }
+
+.f-nsp-storage2:before {
+  content: "Â"; }
+
+.f-nsp-user:before {
+  content: "ã"; }
+
+.f-nsp-remove:before {
+  content: "ä"; }
+
+.f-nsp-clock:before {
+  content: "å"; }
+
+.f-nsp-contract-management-settings:before {
+  content: "æ"; }
+
+.f-nsp-knowledge:before {
+  content: "ç"; }
+
+.f-nsp-stopwatch:before {
+  content: "è"; }
+
+.f-nsp-graph-line:before {
+  content: "é"; }
+
+.f-nsp-book:before {
+  content: "ê"; }
+
+.f-nsp-graph-line-outline:before {
+  content: "ë"; }
+
+.f-nsp-user-outline:before {
+  content: "ì"; }
+
+.f-nsp-bookmark:before {
+  content: "í"; }
+
+.f-nsp-cmdb:before {
+  content: "Í"; }
+
+.f-nsp-opened-book:before {
+  content: "î"; }
+
+.f-nsp-notification-bell:before {
+  content: "ï"; }
+
+.f-nsp-info:before {
+  content: "ð"; }
+
+.f-nsp-info-outline:before {
+  content: "ñ"; }
+
+.f-nsp-bell-outline:before {
+  content: "ò"; }
+
+.f-nsp-message:before {
+  content: "ó"; }
+
+.f-nsp-equalizer:before {
+  content: "ô"; }
+
+.f-nsp-bookmark-ticket:before {
+  content: "õ"; }
+
+.f-nsp-search:before {
+  content: "ö"; }
+
+.f-nsp-cycle:before {
+  content: "÷"; }
+
+.f-nsp-file-text-arrow:before {
+  content: "ø"; }
+
+.f-nsp-star:before {
+  content: "ù"; }
+
+.f-nsp-thumbs-down:before {
+  content: "ú"; }
+
+.f-nsp-refresh:before {
+  content: "û"; }
+
+.f-nsp-home:before {
+  content: "ü"; }
+
+.f-nsp-life-cycle:before {
+  content: "ý"; }
+
+.f-nsp-text:before {
+  content: "Œ"; }
+
+.f-nsp-start-date:before {
+  content: "œ"; }
+
+.f-nsp-number:before {
+  content: "Ÿ"; }
+
+.f-nsp-translation:before {
+  content: "ˆ"; }
+
+.f-nsp-notebook:before {
+  content: "˜"; }
+
+.f-nsp-precentage:before {
+  content: "ı"; }
+
+.f-nsp-branch:before {
+  content: "Ł"; }
+
+.f-nsp-paragraph:before {
+  content: "ł"; }
+
+.f-nsp-caret-square-o-down:before {
+  content: "Š"; }
+
+.f-nsp-check-square-o:before {
+  content: "š"; }
+
+.f-nsp-integer:before {
+  content: "Ž"; }
+
+.f-nsp-subcategory:before {
+  content: "ž"; }
+
+.f-nsp-square-dotted:before {
+  content: "ƒ"; }
+
+.f-nsp-ci-square:before {
+  content: "ˇ"; }
+
+.f-nsp-contract-square:before {
+  content: "˘"; }
+
+.f-nsp-heart:before {
+  content: "˙"; }
+
+.f-nsp-heart-o:before {
+  content: "˚"; }
+
+.f-nsp-notebook-o:before {
+  content: "˛"; }
+
+.f-nsp-dot-square:before {
+  content: "˝"; }
+
+.f-nsp-th-square-o:before {
+  content: "π"; }
+
+.f-nsp-star-outline:before {
+  content: "ÿ"; }
+
+.f-nsp-map-marker:before {
+  content: "–"; }
+
+.f-nsp-check:before {
+  content: "—"; }
+
+.f-nsp-gear:before {
+  content: "‘"; }
+
+.f-nsp-qr-code:before {
+  content: "’"; }
+
+.f-nsp-reorder:before {
+  content: "‚"; }
+
+.f-nsp-subcategory-outline:before {
+  content: "”"; }
+
+.f-nsp-refresh-square:before {
+  content: "„"; }
+
+.f-nsp-bullhorn:before {
+  content: "†"; }
+
+.f-nsp-cart:before {
+  content: "‡"; }
+
+.f-nsp-spyglass:before {
+  content: "•"; }
+
+.f-nsp-tape:before {
+  content: "…"; }
+
+.f-nsp-lock:before {
+  content: "‰"; }
+
+.f-nsp-circle-o:before {
+  content: "¹"; }
+
+.f-nsp-radio:before {
+  content: "º"; }
+
+.f-nsp-user-star:before {
+  content: "‹"; }
+
+.f-nsp-user-config:before {
+  content: "›"; }
+
+.f-nsp-building:before {
+  content: "⁄"; }
+
+.f-nsp-institution:before {
+  content: "€"; }
+
+.f-nsp-bulb-o:before {
+  content: "Ω"; }
+
+.f-nsp-refresh-square-o:before {
+  content: "∂"; }
+
+.f-nsp-annoucements:before {
+  content: "†"; }
+
+.f-nsp-annoucement-categories:before {
+  content: "−"; }
+
+.f-nsp-service-catalog-categories:before {
+  content: "π"; }
+
+.f-nsp-service-catalog-items:before {
+  content: "˝"; }
+
+.f-nsp-recycle:before {
+  content: "∞"; }
+
+.f-nsp-full-message:before {
+  content: "þ"; }

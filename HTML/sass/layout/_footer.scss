@@ -1,0 +1,152 @@
+.footer-section {
+  background: #000;
+  padding: 20px 0;
+  .bottom-footer {
+    margin-top: 20px;
+  }
+  .footer-top-menu {
+    @include breakpoint(tablet) {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      @include breakpoint(laptop) {
+        margin-right: 5px;
+      }
+      @include breakpoint(mobile) {
+        margin-bottom: 5px;
+      }
+      a {
+        text-transform: uppercase;
+        color: $primary-color;
+        font-size: 11px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .footer-bottom-menu {
+    @include breakpoint(phablet) {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      @include breakpoint(mobile) {
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
+      a {
+        color: #a7a7a7;
+        font-size: 12px;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .subscribe {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    @include breakpoint(phablet) {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
+    .text {
+      flex-grow: 1;
+      color: #a7a7a7;
+      font-size: 12px;;
+      padding-right: 10px;
+      @include breakpoint(phablet) {
+        flex-basis: 100px;
+        flex-grow: 0;
+      }
+      @include breakpoint(mobile) {
+        flex-basis: auto;
+        margin-bottom: 5px;
+      }
+    }
+    .input {
+      flex-shrink: 0;
+      flex-basis: 70%;
+      display: flex;
+      align-items: center;
+      @include breakpoint(phablet) {
+        flex-basis: 250px;
+      }
+      @include breakpoint(mobile) {
+        flex-basis: auto;
+      }
+      form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        input {
+          height: 30px;
+          padding: 5px 15px;
+          color: #b4b4b4;
+          background: #3c3c3c;
+          border-radius: 3px 0 0 3px;
+          border: 1px solid #4f4f4f;
+          border-right: none;
+        }
+        button {
+          width: 40px;
+          flex-shrink: 0;
+          text-align: center;
+          color: #fff;
+          font-size: 15px;
+          line-height: 30px;
+          height: 100%;
+          padding: 0;
+          background: $primary-color;
+          border-radius: 0 3px 3px 0;
+          @include transition(all .3s ease);
+          &:hover {
+            background: lighten($primary-color, 5%);
+          }
+        }
+      }
+    }
+  }
+  .social {
+    text-align: right;
+    @include breakpoint(phablet) {
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin-right: 12px;
+      line-height: 30px;
+      @include breakpoint(laptop) {
+        margin-right: 8px;
+      }
+      a {
+        color: #a7a7a7;
+        font-size: 18px;
+        @include breakpoint(laptop) {
+          font-size: 16px;
+        }
+        &:hover {
+          color: $primary-color
+        }
+      }
+    }
+  }
+  .copyright {
+    text-align: right;
+    color: #a7a7a7;
+    font-size: 12px;
+    @include breakpoint(phablet) {
+      text-align: center;
+    }
+  }
+}

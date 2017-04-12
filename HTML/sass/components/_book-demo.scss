@@ -1,0 +1,114 @@
+.book-demo-section {
+  background-color: $primary-color;
+  background-image: url(../images/book-demo-bg.png);
+  background-size: cover;
+  background-position: center center;
+  .demo-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    @include breakpoint(phablet) {
+      align-items: center;
+      text-align: center;
+    }
+    .left-preview {
+      flex-shrink: 0;
+      @include breakpoint(tablet) {
+        flex-basis: 60%;
+      }
+      @include breakpoint(phablet) {
+        flex-basis: 100%;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    .right-content {
+      padding: 50px 0;
+      padding-left: 70px;
+      flex-basis: 30%;
+      @include breakpoint(laptop) {
+        padding-left: 60px;
+      }
+      @include breakpoint(tablet) {
+        flex-basis: 40%;
+        padding: 45px 0;
+        padding-left: 50px;
+      }
+      @include breakpoint(phablet) {
+        flex-basis: 100%;
+        padding: 35px 0;
+      }
+      @include breakpoint(mobile) {
+        padding: 20px 0;
+      }
+      .title {
+        position: relative;
+        margin-bottom: 70px;
+        @include breakpoint(laptop) {
+          margin-bottom: 60px;
+        }
+        @include breakpoint(tablet) {
+          margin-bottom: 55px;
+        }
+        @include breakpoint(phablet) {
+          margin-bottom: 50px;
+        }
+        @include breakpoint(mobile) {
+          margin-bottom: 45px;
+        }
+        h2 {
+          @include font-size(34px);
+          font-weight: 300;
+          color: #fff;
+          margin: 0;
+          margin-bottom: 15px;
+          margin-top: 15px;
+          @include breakpoint(tablet) {
+            margin-bottom: 10px;
+            margin-top: 10px;
+          }
+        }
+        .subtitle {
+          @include font-size(18px);
+          color: #b47100;
+          font-weight: 300;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 66px;
+          height: 2px;
+          bottom: -30px;
+          background: #fff;
+          @include breakpoint(phablet) {
+            left: 50%;
+            margin-left: -33px;
+          }
+        }
+      }
+      .action {
+        a {
+          line-height: 41px;
+          padding: 0 50px;
+          border: none;
+          @include breakpoint(laptop) {
+            padding: 0 35px;
+          }
+          @include breakpoint(tablet) {
+            padding: 0 30px;
+          }
+          @include breakpoint(phablet) {
+            padding: 0 25px;
+          }
+          @include breakpoint(mobile) {
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}

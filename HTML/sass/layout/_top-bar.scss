@@ -1,0 +1,107 @@
+.top-bar-section {
+  background: #000;
+  position: relative;
+  .row {
+    > div {
+      position: static;
+    }
+  }
+  .wrap-top-navigation {
+    .toggle-navigation {
+      color: #fff;
+      display: none;
+      font-size: 10px;
+      line-height: 27px;
+      cursor: pointer;
+      text-transform: uppercase;
+      @include breakpoint(phablet) {
+        display: inline-block;
+      }
+    }
+    .top-navigation {
+      @media (min-width: 768px) {
+        display: block !important;
+      }
+      @include breakpoint(phablet) {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 27px;
+        right: 0;
+        background: $secondary-color;
+        z-index: 3;
+      }
+      ul {
+        li {
+          display: inline-block;
+          line-height: 27px;
+          margin-right: 30px;
+          @include breakpoint(tablet) {
+            margin-right: 15px;
+          }
+          @include breakpoint(phablet) {
+            display: block;
+            margin-right: 0;
+            padding: 5px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            &.active {
+              background: rgba(0, 0, 0, 0.1);
+            }
+          }
+          a{
+            color: #fff;
+            display: block;
+            font-size: 10px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  .global {
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      li {
+        border-left: 1px solid #464646;
+        line-height: 27px;
+        &:first-child{
+          @include breakpoint(phablet) {
+            border-left: none;
+          }
+        }
+        &:last-child {
+          border-right: 1px solid #464646;
+          @include breakpoint(phablet) {
+            border-right: none;
+          }
+        }
+        a{
+          padding: 0 18px;
+          display: block;
+          @include breakpoint(tablet) {
+           padding: 0 12px;
+         }
+          @include breakpoint(phablet) {
+            padding: 0 5px;
+          }
+         &:hover {
+          text-decoration: none;
+          background: #333;
+        }
+        .f-nsp {
+          font-size: 16px;
+          color: #696969;
+          vertical-align: middle;
+          margin-right: 3px;
+        }
+        .text {
+          color: $primary-color;
+          font-size: 10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+}

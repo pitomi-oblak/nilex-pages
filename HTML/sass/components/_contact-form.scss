@@ -1,0 +1,180 @@
+.contact-form-section {
+  background-image: url(../images/contact-bg.jpg);
+  text-align: center;
+  position: relative;
+  padding: 30px 0;
+  @include breakpoint(mobile) {
+    padding: 20px 0;
+  }
+  h1 {
+    @include font-size(36px);
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 70px;
+    color: #fff;
+    margin-top: 0;
+    @include breakpoint(laptop) {
+      margin-bottom: 60px;
+    }
+    @include breakpoint(tablet) {
+      margin-bottom: 55px;
+    }
+    @include breakpoint(phablet) {
+      margin-bottom: 50px;
+    }
+    @include breakpoint(mobile) {
+      margin-bottom: 45px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 66px;
+      height: 2px;
+      margin-left: -33px;
+      bottom: -20px;
+      background: $primary-color;
+      @include breakpoint(tablet) {
+        bottom: -25px;
+      }
+      @include breakpoint(mobile) {
+        bottom: -15px;
+      }
+    }
+  }
+  .form-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+    form {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      @include breakpoint(600px) {
+        flex-wrap: wrap;
+      }
+      > div {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 0 16px;
+        @include breakpoint(600px) {
+          width: 100%;
+          flex-basis: auto;
+        }
+        @include breakpoint(mobile) {
+          padding: 0;
+        }
+        > div {
+          padding-bottom: 20px;
+        }
+      }
+      .input {
+        input {
+          background: transparent;
+          border-radius: 4px;
+          border: 1px solid rgba(255,255,255,0.8);
+          width: 100%;
+          height: 42px;
+          padding: 5px 15px;
+          line-height: 42px;
+          font-size: 14px;
+          color: #fff;
+          @include transition(all .3s ease);
+          &:focus {
+            border-color: $primary-color;
+            background: rgba(#fff, 0.3);
+          }
+        }
+      }
+      .textarea {
+        flex-grow: 1;
+        height: 100%;
+        min-height: 150px;
+        textarea {
+          height: 100%;
+          display: block;
+          width: 100%;
+          background: transparent;
+          border-radius: 4px;
+          border: 1px solid rgba(255,255,255,0.8);
+          padding: 15px;
+          font-size: 14px;
+          color: #fff;
+          @include transition(all .3s ease);
+          resize: vertical;
+          overflow: auto;
+          &:focus {
+            border-color: $primary-color;
+            background: rgba(#fff, 0.3);
+          }
+        }
+      }
+      .select {
+        select {
+          background: transparent;
+          border-radius: 4px;
+          border: 1px solid rgba(255,255,255,0.8);
+          width: 100%;
+          height: 42px;
+          padding: 5px 15px;
+          padding-right: 50px;
+          line-height: 42px;
+          font-size: 14px;
+          color: #fff;
+          @include transition(all .3s ease);
+          option {
+            color: #000;
+            &:disabled {
+              color: #ccc;
+            }
+          }
+          &:focus {
+            border-color: $primary-color;
+            background: rgba(#fff, 0.3);
+          }
+        }
+      }
+      .submit {
+        flex-shrink: 0;
+        button {
+          line-height: 36px;
+          width: 100%;
+          padding: 0;
+          border: 3px solid rgba(255,255,255,0.3);
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+        }
+      }
+    }
+  }
+  .policy {
+    width: 40%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 15px;
+    @include breakpoint(laptop) {
+      width: 50%;
+    }
+    @include breakpoint(tablet) {
+      width: 70%;
+    }
+    @include breakpoint(600px) {
+      width: 90%;
+      margin-top: 0;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
